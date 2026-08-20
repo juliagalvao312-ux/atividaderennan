@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Confuso</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="screen">
+      <div class="panel panel-left">
+        <div class="badge">Acesso Nível 7</div>
+        <h1>Portal de Entrada</h1>
+        <p class="subtitle">Sistema anti-alarme / interface espelhada</p>
+      </div>
+
+      <div class="panel panel-right">
+        <div class="lock-status" id="lockState">BLOQUEADO</div>
+
+        <form id="loginForm" class="login-form">
+          <label class="field">
+            <span>Usuário</span>
+            <input id="username" type="text" value="anonimo" placeholder="usuário" />
+          </label>
+
+          <label class="field">
+            <span>Senha</span>
+            <input id="password" type="password" value="sombra" placeholder="senha" />
+          </label>
+
+          <div class="button-row">
+            <button type="submit" class="primary">Entrar</button>
+            <button type="button" id="voiceUnlock" class="secondary">Desbloquear por voz</button>
+          </div>
+        </form>
+
+        <div class="voice-hint" id="voiceHint">
+          Dica: diga a frase ao contrário para liberar a porta.
+        </div>
+
+        <div class="status" id="status">Acesso pendente.</div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
